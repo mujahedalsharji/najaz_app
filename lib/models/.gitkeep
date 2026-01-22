@@ -1,0 +1,4 @@
+# Models folder - Contains all data models
+# Organized by feature/domain (auth_models, user_models, service_models, base_models)
+
+

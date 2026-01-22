@@ -1,0 +1,4 @@
+# Services folder - GraphQL and API services
+# Contains: graphql_client, api_client, graphql_queries, graphql_mutations
+
+

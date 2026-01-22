@@ -1,0 +1,5 @@
+# GraphQL Queries
+# 
+# This folder will contain all GraphQL query strings.
+# Each query file should be named descriptively (e.g., user_profile_query.dart, services_list_query.dart)
+

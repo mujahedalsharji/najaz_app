@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "539294377994",
+    "project_id": "bagisto-4c663",
+    "storage_bucket": "bagisto-4c663.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:539294377994:android:6326c6a6640dfbf97f17f3",
+        "android_client_info": {
+          "package_name": "com.example.bagisto"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCn1_Secf7faRbCGOjWkMHxNaw5buy5gKM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

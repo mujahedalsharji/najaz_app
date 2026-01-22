@@ -1,0 +1,5 @@
+# GraphQL Mutations
+# 
+# This folder will contain all GraphQL mutation strings.
+# Each mutation file should be named descriptively (e.g., sign_in_mutation.dart, create_booking_mutation.dart)
+
