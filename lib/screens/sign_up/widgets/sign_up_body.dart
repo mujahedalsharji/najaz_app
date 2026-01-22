@@ -284,10 +284,10 @@ class SignUpFormState extends State<SignUpForm> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: AppSpacing.spacingMedium),
+                  const SizedBox(height:90),
 
                   // Agreement Checkbox
-                  agreementCheckbox(),
+
                   //  const SizedBox(height: AppSpacing.spacingLarge),
 
                   // Submit Button
@@ -428,61 +428,6 @@ class SignUpFormState extends State<SignUpForm> {
         _dateOfBirthController.text = picked.toDateString();
       });
     }
-  }
-
-  /// Builds agreement checkbox
-  Widget agreementCheckbox() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Row(
-          children: [
-            Checkbox(
-              value: _agreement,
-              onChanged: (bool? value) {
-                setState(() {
-                  _agreement = value ?? false;
-                  _showAgreementError = false;
-                });
-              },
-              activeColor: AppColors.primaryColor,
-            ),
-            Expanded(
-              child: GestureDetector(
-                onTap: () {
-                  setState(() {
-                    _agreement = !_agreement;
-                    _showAgreementError = false;
-                  });
-                },
-                child: Text.rich(
-                  TextSpan(
-                    children: <InlineSpan>[
-                      TextSpan(text: StringConstants.iAgree.localized()),
-                      TextSpan(
-                        text: ' ${StringConstants.privacyPolicy.localized()}',
-                        style: const TextStyle(
-                          color: AppColors.primaryColor,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
-        if (_showAgreementError)
-          Padding(
-            padding: const EdgeInsets.only(left: AppSpacing.spacingLarge),
-            child: Text(
-              StringConstants.pleaseAcceptAgreement.localized(),
-              style: _bagistoErrorStyle,
-            ),
-          ),
-      ],
-    );
   }
 
   /// Builds submit button
