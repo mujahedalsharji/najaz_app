@@ -61,7 +61,7 @@ class _ProfileBodyState extends State<ProfileBody> {
         Stack(
           children: [
             Container(
-              width: 145,
+              width: 146,
               height: 145,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
