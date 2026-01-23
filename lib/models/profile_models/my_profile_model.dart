@@ -31,6 +31,7 @@ class MyProfileModel extends GraphQLBaseModel {
 
   @JsonKey(fromJson: _idFromJson)
   final String? citizenTypeId;
+  final String? citizenTypeName;
 
   final String? createdAt;
   final String? updatedAt;
@@ -50,6 +51,7 @@ class MyProfileModel extends GraphQLBaseModel {
     this.isVerified,
     this.identityVerificationStatus,
     this.citizenTypeId,
+    this.citizenTypeName,
     this.createdAt,
     this.updatedAt,
     this.identityVerification,
@@ -124,6 +126,7 @@ class ProfileCitizen {
 
   @JsonKey(fromJson: _idFromJson)
   final String? citizenTypeId;
+  final String? citizenTypeName;
 
   ProfileCitizen({
     this.id,
@@ -139,6 +142,7 @@ class ProfileCitizen {
     this.isVerified,
     this.identityVerificationStatus,
     this.citizenTypeId,
+    this.citizenTypeName,
   });
 
   static String? _idFromJson(dynamic json) {

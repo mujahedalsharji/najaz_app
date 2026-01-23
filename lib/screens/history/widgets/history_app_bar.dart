@@ -5,7 +5,6 @@
 
 import 'package:flutter/material.dart';
 
-import '../../../utils/app_colors.dart';
 import '../../../utils/app_text_styles.dart';
 import '../../../utils/application_localization.dart';
 import '../../../utils/constants/string_constants.dart';
@@ -33,7 +32,7 @@ class HistoryAppBar extends StatelessWidget implements PreferredSizeWidget {
           centerTitle: true,
           showNotifications: true,
           unreadNotificationsCount: unreadNotificationsCount,
-          backgroundColor: AppColors.secondaryColor,
+          //  backgroundColor: AppColors.secondaryColor,
           elevation: 0,
           titleStyle: AppTextStyles.titleMedium.copyWith(
             fontWeight: FontWeight.bold,

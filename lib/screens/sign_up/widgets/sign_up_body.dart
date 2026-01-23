@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:najaz_app/screens/sign_up/widgets/sign_up__navigate_login_text.dart';
 import 'package:najaz_app/utils/application_localization.dart';
@@ -14,8 +13,6 @@ import '../../../utils/constants/string_constants.dart';
 import '../../../utils/validators/form_validator_helper.dart';
 import '../../../widgets/common_widgets.dart';
 import '../../../widgets/shimmer_widget.dart';
-import '../bloc/sign_up_bloc.dart';
-import '../bloc/sign_up_event.dart';
 
 class SignUpForm extends StatefulWidget {
   final bool isLoading;
@@ -59,10 +56,8 @@ class SignUpFormState extends State<SignUpForm> {
     color: AppColors.textSecondary,
   );
 
-  TextStyle get _bagistoErrorStyle => AppTextStyles.bodySmall.copyWith(
-    fontSize: 10,
-    color: AppColors.error,
-  );
+  TextStyle get _bagistoErrorStyle =>
+      AppTextStyles.bodySmall.copyWith(fontSize: 10, color: AppColors.error);
 
   @override
   void dispose() {
@@ -222,7 +217,8 @@ class SignUpFormState extends State<SignUpForm> {
                               ),
                             ),
                             hintText:
-                                StringConstants.confirmPasswordLabel.localized(),
+                                StringConstants.confirmPasswordLabel
+                                    .localized(),
                             isDense: true,
                             filled: true,
                             fillColor: AppColors.white,
@@ -237,22 +233,30 @@ class SignUpFormState extends State<SignUpForm> {
                             hintStyle: _bagistoHintStyle,
                             labelStyle: _bagistoLabelStyle,
                             enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(AppRadii.input),
+                              borderRadius: BorderRadius.circular(
+                                AppRadii.input,
+                              ),
                               borderSide: BorderSide(color: AppColors.border),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(AppRadii.input),
+                              borderRadius: BorderRadius.circular(
+                                AppRadii.input,
+                              ),
                               borderSide: BorderSide(
                                 color: AppColors.primaryColor,
                                 width: 2.0,
                               ),
                             ),
                             errorBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(AppRadii.input),
+                              borderRadius: BorderRadius.circular(
+                                AppRadii.input,
+                              ),
                               borderSide: BorderSide(color: AppColors.error),
                             ),
                             focusedErrorBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(AppRadii.input),
+                              borderRadius: BorderRadius.circular(
+                                AppRadii.input,
+                              ),
                               borderSide: BorderSide(
                                 color: AppColors.error,
                                 width: 2.0,
@@ -271,8 +275,7 @@ class SignUpFormState extends State<SignUpForm> {
                                 });
                               },
                             ),
-                            suffixIconColor:
-                                Theme.of(context).iconTheme.color,
+                            suffixIconColor: Theme.of(context).iconTheme.color,
                           ),
                           validator:
                               (value) =>
@@ -284,7 +287,7 @@ class SignUpFormState extends State<SignUpForm> {
                       ),
                     ],
                   ),
-                  const SizedBox(height:90),
+                  const SizedBox(height: 90),
 
                   // Agreement Checkbox
 

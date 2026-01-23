@@ -6,6 +6,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../models/profile_models/my_profile_model.dart';
+import '../../../utils/shared_preferences/shared_preference_helper.dart';
 import 'profile_event.dart';
 import 'profile_repository.dart';
 import 'profile_state.dart';
@@ -34,6 +35,10 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
       final unreadCount = results[1] as int?;
 
       if (profile != null && profile.isSuccess) {
+        final isVerified =
+            profile.isVerified == true ||
+            profile.identityVerificationStatus == true;
+        appStoragePref.setAccountVerified(isVerified);
         emit(ProfileLoaded(
           profile: profile,
           unreadNotificationsCount: unreadCount,
@@ -67,6 +72,10 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
       final unreadCount = await repository.fetchUnreadNotificationsCount();
 
       if (profile != null && profile.isSuccess) {
+        final isVerified =
+            profile.isVerified == true ||
+            profile.identityVerificationStatus == true;
+        appStoragePref.setAccountVerified(isVerified);
         emit(ProfileLoaded(
           profile: profile,
           unreadNotificationsCount: unreadCount ?? existingUnreadCount,

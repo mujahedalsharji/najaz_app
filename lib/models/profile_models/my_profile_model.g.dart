@@ -21,6 +21,7 @@ MyProfileModel _$MyProfileModelFromJson(Map<String, dynamic> json) =>
       isVerified: json['isVerified'] as bool?,
       identityVerificationStatus: json['identityVerificationStatus'] as bool?,
       citizenTypeId: MyProfileModel._idFromJson(json['citizenTypeId']),
+      citizenTypeName: json['citizenTypeName'] as String?,
       createdAt: json['createdAt'] as String?,
       updatedAt: json['updatedAt'] as String?,
       identityVerification: json['identityVerification'] == null
@@ -50,6 +51,7 @@ Map<String, dynamic> _$MyProfileModelToJson(MyProfileModel instance) =>
       'isVerified': instance.isVerified,
       'identityVerificationStatus': instance.identityVerificationStatus,
       'citizenTypeId': instance.citizenTypeId,
+      'citizenTypeName': instance.citizenTypeName,
       'createdAt': instance.createdAt,
       'updatedAt': instance.updatedAt,
       'identityVerification': instance.identityVerification,
@@ -90,6 +92,7 @@ ProfileCitizen _$ProfileCitizenFromJson(Map<String, dynamic> json) =>
       isVerified: json['isVerified'] as bool?,
       identityVerificationStatus: json['identityVerificationStatus'] as bool?,
       citizenTypeId: ProfileCitizen._idFromJson(json['citizenTypeId']),
+      citizenTypeName: json['citizenTypeName'] as String?,
     );
 
 Map<String, dynamic> _$ProfileCitizenToJson(ProfileCitizen instance) =>
@@ -107,4 +110,5 @@ Map<String, dynamic> _$ProfileCitizenToJson(ProfileCitizen instance) =>
       'isVerified': instance.isVerified,
       'identityVerificationStatus': instance.identityVerificationStatus,
       'citizenTypeId': instance.citizenTypeId,
+      'citizenTypeName': instance.citizenTypeName,
     };

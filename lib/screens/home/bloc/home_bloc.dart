@@ -9,6 +9,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../models/home_models/home_page_model.dart';
+import '../../../utils/shared_preferences/shared_preference_helper.dart';
 import 'home_event.dart';
 import 'home_repository.dart';
 import 'home_state.dart';
@@ -40,6 +41,13 @@ class HomeBloc extends Bloc<HomeBaseEvent, HomeBaseState> {
       );
 
       if (homePageModel != null && homePageModel.isSuccess == true) {
+        final status = homePageModel.citizen?.identityVerificationStatus;
+        if (status != null) {
+          final normalized = status.toLowerCase();
+          final isVerified =
+              normalized == 'verified' || normalized == 'true';
+          appStoragePref.setAccountVerified(isVerified);
+        }
         emit(
           FetchHomePageState.success(
             homePageModel: homePageModel,

@@ -102,6 +102,7 @@ class StringConstants {
   static const String minLengthLabel = "minLengthLabel";
   static const String maxLengthLabel = "maxLengthLabel";
   static const String passwordMinLength = "passwordMinLength";
+  static const String pleaseWaitMoment = "pleaseWaitMoment";
 
   // ============================================================
   // HOME & SERVICES
@@ -125,6 +126,15 @@ class StringConstants {
   static const String newServices = "newServices";
   static const String all = "all";
   static const String noServicesFound = "noServicesFound";
+
+  static const String serviceDescription = "serviceDescription";
+  static const String requiredDocuments = "requiredDocuments";
+  static const String ensureDocumentsBeforeContinue =
+      "ensureDocumentsBeforeContinue";
+  static const String startRequest = "startRequest";
+  static const String verifyAccountToAccessServices =
+      "verifyAccountToAccessServices";
+  static const String goToVerification = "goToVerification";
 
   // ============================================================
   // BOOKINGS & HISTORY
@@ -185,7 +195,8 @@ class StringConstants {
   static const String changesSaved = "changesSaved";
   static const String saveChanges = "saveChanges";
   static const String videoVerification = "videoVerification";
-  static const String videoVerificationDescription = "videoVerificationDescription";
+  static const String videoVerificationDescription =
+      "videoVerificationDescription";
   static const String videoInstructions = "videoInstructions";
   static const String videoInstructionsContent = "videoInstructionsContent";
   static const String tapToRecordVideo = "tapToRecordVideo";
@@ -211,12 +222,15 @@ class StringConstants {
   static const String verificationUnderReview = "verificationUnderReview";
   static const String verificationApproved = "verificationApproved";
   static const String verificationRejected = "verificationRejected";
-  static const String verificationStatusUndefined = "verificationStatusUndefined";
+  static const String verificationStatusUndefined =
+      "verificationStatusUndefined";
   static const String requestDate = "requestDate";
   static const String reviewDate = "reviewDate";
   static const String notesLabel = "notesLabel";
-  static const String verificationApprovedMessage = "verificationApprovedMessage";
-  static const String verificationRejectedMessage = "verificationRejectedMessage";
+  static const String verificationApprovedMessage =
+      "verificationApprovedMessage";
+  static const String verificationRejectedMessage =
+      "verificationRejectedMessage";
   static const String verificationPendingMessage = "verificationPendingMessage";
   static const String editRequest = "editRequest";
 
@@ -238,7 +252,8 @@ class StringConstants {
   static const String lastUpdated = "lastUpdated";
   static const String privacyPolicyContent = "privacyPolicyContent";
   static const String informationWeCollect = "informationWeCollect";
-  static const String informationWeCollectContent = "informationWeCollectContent";
+  static const String informationWeCollectContent =
+      "informationWeCollectContent";
   static const String howWeUseYourInformation = "howWeUseYourInformation";
   static const String howWeUseYourInformationContent =
       "howWeUseYourInformationContent";

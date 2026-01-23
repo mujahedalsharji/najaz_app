@@ -13,6 +13,7 @@ import '../screens/language/view/language_screen.dart';
 import '../screens/main_tabs/main_tabs_screen.dart';
 import '../screens/profile/view/account_info_screen.dart';
 import '../screens/privacy_policy/view/privacy_policy_screen.dart';
+import '../screens/service_description/view/service_description_screen.dart';
 import '../screens/log_in/view/log_in_screen.dart';
 import '../screens/notifications/view/notifications_screen.dart';
 import '../screens/sign_up/view/sign_up_screen.dart';
@@ -64,12 +65,17 @@ class AppNavigation {
           (context) => MainTabsScreen.builder(context, initialIndex: 0),
       RouteConstants.services:
           (context) => MainTabsScreen.builder(context, initialIndex: 1),
-      RouteConstants.serviceDetails:
-          (context) => _buildPlaceholderScreen(
-            context,
-            'Service Details Screen',
-            RouteConstants.serviceDetails,
-          ),
+      RouteConstants.serviceDetails: (context) {
+        final args =
+            ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>?;
+        return ServiceDescriptionScreen.builder(
+          context,
+          serviceId: args?['serviceId']?.toString(),
+          serviceName: args?['serviceName']?.toString(),
+          serviceDescription: args?['serviceDescription']?.toString(),
+          serviceImage: args?['serviceImage']?.toString(),
+        );
+      },
       RouteConstants.history:
           (context) => MainTabsScreen.builder(context, initialIndex: 2),
       RouteConstants.profile:

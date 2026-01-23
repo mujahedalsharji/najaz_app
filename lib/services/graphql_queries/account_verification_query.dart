@@ -37,7 +37,7 @@ class AccountVerificationQuery {
           status
           isVerified
           identityVerificationStatus
-          citizenTypeId
+        citizenTypeName
           createdAt
           updatedAt
         }

@@ -260,6 +260,12 @@ class _ProfileBodyState extends State<ProfileBody> {
   }
 
   String _citizenTypeLabel(MyProfileModel? profile) {
+    final typeName =
+        profile?.citizenTypeName ??
+        profile?.identityVerification?.citizen?.citizenTypeName;
+    if (typeName != null && typeName.trim().isNotEmpty) {
+      return typeName.trim();
+    }
     final typeId =
         int.tryParse(
           profile?.citizenTypeId ??

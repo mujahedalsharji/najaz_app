@@ -62,6 +62,9 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
   /// Optional title text style
   final TextStyle? titleStyle;
 
+  /// Optional flexible space widget
+  final Widget? flexibleSpace;
+
   const CommonAppBar(
     this.title, {
     Key? key,
@@ -79,6 +82,7 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.imageHeight,
     this.imageWidth,
     this.titleStyle,
+    this.flexibleSpace,
   }) : super(key: key);
 
   @override
@@ -159,8 +163,10 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       elevation: elevation ?? 4.0,
       centerTitle: centerTitle,
-      // backgroundColor:
-      //     backgroundColor ?? Theme.of(context).appBarTheme.backgroundColor,
+      backgroundColor:
+          backgroundColor ?? Theme.of(context).appBarTheme.backgroundColor,
+      surfaceTintColor: backgroundColor,
+      flexibleSpace: flexibleSpace,
       leading: leading,
       title: _buildTitle(context),
       actions: appBarActions.isNotEmpty ? appBarActions : null,

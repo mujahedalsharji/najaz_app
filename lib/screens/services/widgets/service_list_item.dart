@@ -9,6 +9,8 @@ import 'package:flutter/material.dart';
 
 import '../../../models/service_models/service_model.dart';
 import '../../../utils/app_colors.dart';
+import '../../../utils/app_navigation.dart';
+import '../../../utils/constants/route_constants.dart';
 import '../../../utils/app_text_styles.dart';
 import '../../../widgets/image_view.dart';
 
@@ -29,12 +31,16 @@ class ServiceListItem extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       child: InkWell(
         onTap: () {
-          // TODO: Navigate to service details
-          // AppNavigation.navigateTo(
-          //   context,
-          //   RouteConstants.serviceDetails,
-          //   arguments: service.id,
-          // );
+          AppNavigation.navigateTo(
+            context,
+            RouteConstants.serviceDetails,
+            arguments: {
+              'serviceId': service.id,
+              'serviceName': service.name,
+              'serviceDescription': service.description,
+              'serviceImage': service.baseImage ?? service.image,
+            },
+          );
         },
         borderRadius: BorderRadius.circular(16),
         child: Padding(

@@ -19,7 +19,7 @@ class MyProfileQuery {
         status
         isVerified
         identityVerificationStatus
-        citizenTypeId
+        citizenTypeName
         createdAt
         updatedAt
         identityVerification {
@@ -39,7 +39,7 @@ class MyProfileQuery {
             status
             isVerified
             identityVerificationStatus
-            citizenTypeId
+            citizenTypeName
           }
         }
       }

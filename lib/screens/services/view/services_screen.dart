@@ -62,7 +62,7 @@ class ServicesScreen extends StatelessWidget {
             centerTitle: true,
             showNotifications: true,
             unreadNotificationsCount: unreadCount,
-            backgroundColor: AppColors.secondaryColor,
+           // backgroundColor: AppColors.secondaryColor,
             elevation: 0,
             titleStyle: AppTextStyles.titleMedium.copyWith(
               fontWeight: FontWeight.bold,

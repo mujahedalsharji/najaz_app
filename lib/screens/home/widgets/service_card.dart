@@ -45,7 +45,12 @@ class ServiceCard extends StatelessWidget {
         AppNavigation.navigateTo(
           context,
           RouteConstants.serviceDetails,
-          arguments: {'serviceId': service.id},
+          arguments: {
+            'serviceId': service.id,
+            'serviceName': service.name,
+            'serviceDescription': service.description,
+            'serviceImage': service.baseImage ?? service.image,
+          },
         );
       },
       child: Container(
